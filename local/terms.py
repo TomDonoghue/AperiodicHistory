@@ -5,8 +5,9 @@
 
 # DEFINE TERMS
 TERMS = [
-    ['aperiodic', 'arrythmic'],
+    ['aperiodic', 'arrhythmic', 'spectral slope', 'spectral exponent'],
     ['1/f', '1/f-like', 'one-over f'],
+    ['criticality'],
 ]
 
 # Define inclusion terms
