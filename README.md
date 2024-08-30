@@ -20,7 +20,7 @@ This project was written in Python3 and requires Python >= 3.8 to run.
 
 If you want to re-run this project, you will need some external dependencies.
 
-- [lisc](https://github.com/lisc-tools/lisc) >= 0.3.0
+- [lisc](https://github.com/lisc-tools/lisc) >= 0.4.0
 
 ## Data
 
