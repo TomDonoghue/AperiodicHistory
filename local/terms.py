@@ -8,6 +8,8 @@ TERMS = [
     ['aperiodic', 'arrhythmic', 'spectral slope', 'spectral exponent'],
     ['1/f', '1/f-like', 'one-over f'],
     ['criticality'],
+    ['powerlaw'],
+    ['fractal'],
 ]
 
 # Define inclusion terms
