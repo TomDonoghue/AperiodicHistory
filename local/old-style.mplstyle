@@ -1,0 +1,24 @@
+axes.linewidth : 1.5
+xtick.labelsize : 11
+ytick.labelsize : 11
+
+lines.linewidth : 1.5
+lines.markersize : 6
+lines.markerfacecolor: white
+lines.markeredgecolor: k
+
+xtick.major.size: 10
+xtick.major.width: 1.5
+xtick.minor.size: 4
+xtick.minor.width: 1.5
+xtick.direction: in
+xtick.major.pad: 5
+
+ytick.major.size: 10
+ytick.major.width: 1.5
+ytick.minor.size: 4
+ytick.minor.width: 1.5
+ytick.direction: in
+
+axes.titleweight: normal
+axes.titlepad: 20
