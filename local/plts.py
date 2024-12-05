@@ -1,67 +1,12 @@
 """Local plotting code."""
 
 import warnings
-from itertools import repeat, cycle
-
-import numpy as np
 
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-from neurodsp.plts.style import style_plot
-from neurodsp.plts.utils import check_ax, savefig
-
 ####################################################################################################
 ####################################################################################################
-
-@savefig
-@style_plot
-def plot_autocorr(times, acs, labels=None, colors=None, ax=None, **kwargs):
-    """Plot autocorrelation results."""
-
-    ax = check_ax(ax, figsize=kwargs.pop('figsize', (6, 5)))
-
-    times, acs, labels, colors = _prep_multi_plot(times, acs, labels, colors)
-
-    for time, ac, color, label in zip(times, acs, colors, labels):
-        ax.plot(time, ac, color=color, label=label)
-
-    ax.set(xlabel='Lag (Samples)', ylabel='Autocorrelation')
-
-
-def plot_spectra_3D(freqs, powers, log_freqs=False, log_powers=True, colors=None, **kwargs):
-    """Plot a series of power spectra in a 3D plot."""
-
-    fig = plt.figure()
-    ax = fig.add_subplot(projection='3d')
-
-    yticks = list(range(len(powers)))
-
-    colors = repeat(colors) if not isinstance(colors, list) else cycle(colors)
-
-    freqs = np.log10(freqs) if log_freqs else freqs
-
-    for cvals, yt, color in zip(powers, yticks, colors):
-        ax.plot(xs=freqs, ys=[yt] * len(freqs), zs=np.log10(cvals) if log_powers else cvals,
-                color=color, **kwargs)
-
-    ax.set(
-
-        # Labels
-        xlabel='Frequency (Hz)',
-        ylabel='Channels',
-        zlabel='Power',
-
-        # Limits
-        xlim=[min(freqs), max(freqs)],
-        ylim=[0, max(yticks)],
-    )
-
-    ax.set_yticks(yticks, yticks)
-
-    # Set orientation
-    ax.view_init(20, -50)
-
 
 ## STYLE
 
