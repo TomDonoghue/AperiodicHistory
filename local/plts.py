@@ -84,6 +84,12 @@ def plot_old_stylify(ax, label_fs=18, text_fs=12):
         tick.set_fontname("Gill Sans")
         tick.set_fontsize(text_fs)
 
+    # If 3D plot, also update z-axis
+    if hasattr(ax, 'get_zticklabels'):
+        for tick in ax.get_zticklabels():
+            tick.set_fontname("Gill Sans")
+            tick.set_fontsize(text_fs)
+
 
 def style_spectrum_plot(ax):
     """Style spectrum plot."""
