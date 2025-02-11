@@ -1,0 +1,4 @@
+numpy
+matplotlib
+lisc >= 0.4.0
+neurodsp >= 2.3.0
